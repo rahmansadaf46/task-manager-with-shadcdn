@@ -1,11 +1,12 @@
 
 import { AddUserModal } from "@/components/module/users/AddUserModal";
-import UserCard from "@/components/module/users/UserCard";
-import { selectUsers } from "@/redux/features/user/userSlice";
-import { useAppSelector } from "@/redux/hooks";
+// import UserCard from "@/components/module/users/UserCard";
+// import { selectUsers } from "@/redux/features/user/userSlice";
+// import { useAppSelector } from "@/redux/hooks";
 
 const User = () => {
-    const users = useAppSelector(selectUsers);
+    // const users = useAppSelector(selectUsers);
+
     return (
         <div className="mx-auto max-w-7xl px-5 mt-20">
                 <div className="flex justify-end items-center gap-5">
@@ -15,9 +16,9 @@ const User = () => {
             </div>
 
             <div className="space-y-5 mt-5">
-                {users.map((user) => (
+                {/* {users.map((user) => (
                     <UserCard key={user.id} user={user} />
-                ))}
+                ))} */}
             </div>
         </div>
     );

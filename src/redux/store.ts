@@ -1,18 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './features/counter/counterSlice'
-import taskReducer from './features/task/taskSlice'
-import userReducer from './features/user/userSlice'
+// import counterReducer from './features/counter/counterSlice'
+// import taskReducer from './features/task/taskSlice'
+// import userReducer from './features/user/userSlice'
+import { baseApi } from './api/baseApi'
 // ...
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
-    todo: taskReducer,
-    user: userReducer
-    // posts: postsReducer,
-    // comments: commentsReducer,
-    // users: usersReducer,
+    [baseApi.reducerPath]: baseApi.reducer,
+    // counter: counterReducer,
+    // todo: taskReducer,
+    // user: userReducer
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

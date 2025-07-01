@@ -1,4 +1,4 @@
-import type { RootState } from "@/redux/store";
+// import type { RootState } from "@/redux/store";
 import type { IUser } from "@/types";
 import { createSlice, nanoid, type PayloadAction } from "@reduxjs/toolkit";
 
@@ -39,9 +39,9 @@ const userSlice = createSlice({
   },
 });
 
-export const selectUsers = (state: RootState) => {
-  return state.user.users;
-};
+// export const selectUsers = (state: RootState) => {
+//   return state.user.users;
+// };
 
 export const { addUser, removeUser } = userSlice.actions;
 
