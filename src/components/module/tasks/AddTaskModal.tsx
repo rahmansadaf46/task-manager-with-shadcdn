@@ -34,7 +34,7 @@ export function AddTaskModal() {
                         <DialogTitle>Add Task</DialogTitle>
                     </DialogHeader>
                     <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)}>
+                        <form className="space-y-3" onSubmit={form.handleSubmit(onSubmit)}>
                             <FormField
                                 control={form.control}
                                 name="title"
